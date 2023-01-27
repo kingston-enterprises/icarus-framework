@@ -8,6 +8,11 @@
             "email": "qhawe@kingston-enterprises.net"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "kingston\\icarus\\": "./"
+        }
+    },
     "minimum-stability": "alpha",
     "require": {}
 }
