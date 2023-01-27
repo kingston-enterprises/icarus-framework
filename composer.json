@@ -1,0 +1,13 @@
+{
+    "name": "kingston/icarus",
+    "description": "Kingston Enterprises in-house php framework",
+    "type": "library",
+    "authors": [
+        {
+            "name": "qhawe",
+            "email": "qhawe@kingston-enterprises.net"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {}
+}
