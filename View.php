@@ -1,7 +1,7 @@
 <?php
 /** created by : kingston-5 @ 7/01/23 **/ 
 
-namespace kingstonenterprises\core;
+namespace kingston\icarus ;
 
 // represents the sites views
 class View

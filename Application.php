@@ -1,7 +1,7 @@
 <?php
 /** created by : kingston-5 @ 6/01/23 **/
 
-namespace kingstonenterprises\core;
+namespace kingston\icarus ;
 
 use kingstonenterprises\app\models\Visitor;
 use kingstonenterprises\app\models\User;

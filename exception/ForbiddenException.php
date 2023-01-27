@@ -1,10 +1,10 @@
 <?php
 /** created by : kingston-5 @ 17/01/23 **/
 
-namespace kingstonenterprises\core\exception;
+namespace kingston\icarus \exception;
 
 
-use kingstonenterprises\core\Application;
+use kingston\icarus \Application;
 
 /**
  * Class ForbiddenException

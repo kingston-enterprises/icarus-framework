@@ -1,7 +1,7 @@
 <?php
 /** created by : kingston-5 @ 6/01/23 **/ 
 
-namespace kingstonenterprises\core;
+namespace kingston\icarus ;
 
 /* controlling class for all system requests */
 class Request {
