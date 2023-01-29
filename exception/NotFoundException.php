@@ -1,7 +1,7 @@
 <?php
 /** created by : kingston-5 @ 17/01/23 **/
 
-namespace kingston\icarus \exception;
+namespace kingston\icarus\exception;
 
 
 /**

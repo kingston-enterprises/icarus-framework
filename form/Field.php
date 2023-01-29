@@ -1,9 +1,9 @@
 <?php
 /** created by : kingston-5 @ 17/01/23 **/
 
-namespace kingston\icarus \form;
+namespace kingston\icarus\form;
 
-use kingston\icarus \Model;
+use kingston\icarus\Model;
 
 class Field extends BaseField
 {

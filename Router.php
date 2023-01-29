@@ -1,9 +1,9 @@
 <?php
 /** created by : kingston-5 @ 6/01/23 **/ 
 
-namespace kingston\icarus ;
+namespace kingston\icarus;
 
-use kingston\icarus \exception\NotFoundException;
+use kingston\icarus\exception\NotFoundException;
 
 /* url router*/
 class Router {

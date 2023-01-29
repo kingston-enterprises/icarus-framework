@@ -1,7 +1,7 @@
 <?php
 /** created by : kingston-5 @ 6/01/23 **/
 
-namespace kingston\icarus ;
+namespace kingston\icarus;
 
 use kingstonenterprises\app\models\Visitor;
 use kingstonenterprises\app\models\User;
@@ -47,23 +47,23 @@ class Application {
         
         // if app is not running in the cli
         // resolve visitor details
-        if(self::$api != "cli") {
-	        $this->visitor = new Visitor();
+        // if(self::$api != "cli") {
+	    //     $this->visitor = new Visitor();
 			
-            if(!$this->visitor->findOne(['ip' => Application::$app->visitor->ip])){
-    	        $this->visitor->ip = Application::$app->visitor->ip;
-    	    	$this->visitor->save();
-    	    }
+        //     if(!$this->visitor->findOne(['ip' => Application::$app->visitor->ip])){
+    	//         $this->visitor->ip = Application::$app->visitor->ip;
+    	//     	$this->visitor->save();
+    	//     }
 	    	
-            $this->visitor = $this->visitor->findOne(['ip' => Application::$app->visitor->ip]);
-	    	Application::$app->session->set('visitorId', $this->visitor->id);
-        }
+        //     $this->visitor = $this->visitor->findOne(['ip' => Application::$app->visitor->ip]);
+	    // 	Application::$app->session->set('visitorId', $this->visitor->id);
+        // }
         
-        $userId = Application::$app->session->get('user');
-        if ($userId) {
-            $key = $this->userClass::primaryKey();
-            $this->user = $this->userClass::findOne([$key => $userId]);
-        } 
+        // $userId = Application::$app->session->get('user');
+        // if ($userId) {
+        //     $key = $this->userClass::primaryKey();
+        //     $this->user = $this->userClass::findOne([$key => $userId]);
+        // } 
     }
 
     // try to show the requested view

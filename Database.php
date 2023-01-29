@@ -1,7 +1,7 @@
 <?php
 /** created by : kingston-5 @ 8/01/23 **/ 
 
-namespace kingston\icarus ;
+namespace kingston\icarus;
 
 /**
  * Class Database
