@@ -9,6 +9,7 @@ class Field extends BaseField
 {
     const TYPE_TEXT = 'text';
     const TYPE_PASSWORD = 'password';
+    const TYPE_DATETIME = 'datetime-local';
     
     public function __construct(Model $model, string $attribute)
     {
@@ -33,5 +34,10 @@ class Field extends BaseField
         return $this;
     }
 
+    public function dateTimeField()
+    {
+        $this->type = self::TYPE_DATETIME;
+        return $this;
+    }
 
 }
