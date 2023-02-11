@@ -27,9 +27,6 @@ class Application {
     public Session $session;
     public string $layout = 'main';
     
-    public ?Visitor $visitor;
-    public ?User $user;
-    
     // start app lifecycle by instantiating important classes and variables
     public function __construct($rootDir, $config){
     	
@@ -42,28 +39,7 @@ class Application {
         $this->view = new View();
         $this->db = new Database($config['db']);
         $this->session = new Session();
-        $this->user = null;
         $this->userClass = $config['userClass'];
-        
-        // if app is not running in the cli
-        // resolve visitor details
-        // if(self::$api != "cli") {
-	    //     $this->visitor = new Visitor();
-			
-        //     if(!$this->visitor->findOne(['ip' => Application::$app->visitor->ip])){
-    	//         $this->visitor->ip = Application::$app->visitor->ip;
-    	//     	$this->visitor->save();
-    	//     }
-	    	
-        //     $this->visitor = $this->visitor->findOne(['ip' => Application::$app->visitor->ip]);
-	    // 	Application::$app->session->set('visitorId', $this->visitor->id);
-        // }
-        
-        // $userId = Application::$app->session->get('user');
-        // if ($userId) {
-        //     $key = $this->userClass::primaryKey();
-        //     $this->user = $this->userClass::findOne([$key => $userId]);
-        // } 
     }
 
     // try to show the requested view
@@ -75,23 +51,6 @@ class Application {
                 'exception' => $e,
             ]);
         }
-    }
-    
-        public function login(User $user)
-    {
-        $this->user = $user;
-        $className = get_class($user);
-        $primaryKey = $className::primaryKey();
-        $value = $user->{$primaryKey};
-        Application::$app->session->set('user', $value);
-
-        return true;
-    }
-
-    public function logout()
-    {
-        $this->user = null;
-        self::$app->session->remove('user');
     }
     
     public function triggerEvent($eventName)
@@ -110,7 +69,7 @@ class Application {
     
     public static function isGuest()
     {
-        return !self::$app->user;
+        return !self::$app->session->get('user');
     }
     
     
