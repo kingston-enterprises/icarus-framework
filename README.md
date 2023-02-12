@@ -52,5 +52,3 @@ $ php -S localhost:5050
 - then just open your localhost in your browser and you should see something like this and you will be good to go.
 ![Kingston Enterprises Icarus FrameWork Welcome Screen](https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png)
 
-## Dependencies
-- apart from the icarus framework the only dependency is Vlucas` phpdotenv library see their repo [here](https://github.com/vlucas/phpdotenv)
