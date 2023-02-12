@@ -1,7 +1,7 @@
 # Icarus framework
 
-The intention of icarus was to build a light weight, beginner friendly framework help fastrack development of our clients websites.
-the idea is that when starting a new client project we can just install the tried and tested code for the basic features and then just build on that
+Icarus was created with the goal of creating a lightweight, user-friendly framework to help accelerate the development of our clients' websites.
+The idea is that we can simply install the tested code for the fundamental features when beginning a new client project and then simply build on that. 
 
 Basic features include:
 - Custom Routing
