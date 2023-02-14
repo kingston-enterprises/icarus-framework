@@ -1,11 +1,12 @@
 <?php
+
 /** created by : kingston-5 @ 6/01/23 **/
 
 namespace kingston\icarus;
 
 
-/**
- * Class Model
+/** @class Model: parent class to interface with database tables
+ * @no-named-arguments
  */
 class Model
 {
@@ -16,7 +17,10 @@ class Model
     const RULE_MATCH = 'match';
     const RULE_UNIQUE = 'unique';
 
-    public array $errors = [];
+    protected array $errors = [];
+    protected array $attributes = [];
+    protected array $labels = [];
+    protected array $rules = [];
 
     public function loadData($data)
     {
@@ -27,40 +31,53 @@ class Model
         }
     }
 
-    public function attributes()
+    public function setAttributes($attributes)
     {
-        return [];
+        $this->attributes = $attributes;
     }
 
-    public function labels()
+    public function getAttributes()
     {
-        return [];
+        return $this->attributes;
+    }
+
+    public function setLabels($labels)
+    {
+        $this->labels = $labels;
     }
 
     public function getLabel($attribute)
     {
-        return $this->labels()[$attribute] ?? $attribute;
+        return $this->labels[$attribute] ?? $attribute;
     }
 
-    public function rules()
+    public function setRules($rules)
     {
-        return [];
+        foreach ($rules as $key => $rule) {
+            if (!property_exists($this, $key)) {
+                unset($rules[$key]);
+            }
+        }
+        $this->rules = $rules;
+    }
+
+    public function getRules()
+    {
+        return $this->rules;
     }
 
     public function validate(array $ignore = [])
     {
-        foreach ($this->rules() as $attribute => $rules) {
-        	//var_dump($attribute);
+        foreach ($this->getRules() as $attribute => $rules) {
             $value = $this->{$attribute};
-            
-		    
+
             foreach ($rules as $rule) {
                 $ruleName = $rule;
                 if (!is_string($rule)) {
                     $ruleName = $rule[0];
                 }
                 if ($ruleName === self::RULE_REQUIRED && empty($value)) {
-                    $this->addErrorByRule($attribute, self::RULE_REQUIRED);
+                    $this->addErrorByRule($attribute, self::RULE_REQUIRED, ['field' => $this->getLabel($attribute)]);
                 }
                 if ($ruleName === self::RULE_EMAIL && !filter_var($value, FILTER_VALIDATE_EMAIL)) {
                     $this->addErrorByRule($attribute, self::RULE_EMAIL);
@@ -69,7 +86,7 @@ class Model
                     $this->addErrorByRule($attribute, self::RULE_MIN, ['min' => $rule['min']]);
                 }
                 if ($ruleName === self::RULE_MAX && strlen($value) > $rule['max']) {
-                    $this->addErrorByRule($attribute, self::RULE_MAX);
+                    $this->addErrorByRule($attribute, self::RULE_MAX, ['max' => $rule['max']]);
                 }
                 if ($ruleName === self::RULE_MATCH && $value !== $this->{$rule['match']}) {
                     $this->addErrorByRule($attribute, self::RULE_MATCH, ['match' => $rule['match']]);
@@ -87,10 +104,10 @@ class Model
                         $this->addErrorByRule($attribute, self::RULE_UNIQUE);
                     }
                 }
-                if (in_array($attribute, $ignore)){
-		    	echo PHP_EOL . $attribute . "should be ignored";
-		    	array_pop($this->errors);
-		    	}
+                if (in_array($attribute, $ignore)) {
+                    echo PHP_EOL . $attribute . "should be ignored";
+                    array_pop($this->errors);
+                }
             }
         }
         return empty($this->errors);
@@ -99,10 +116,10 @@ class Model
     public function errorMessages()
     {
         return [
-            self::RULE_REQUIRED => 'This field is required',
+            self::RULE_REQUIRED => '{field} is required',
             self::RULE_EMAIL => 'This field must be valid email address',
-            self::RULE_MIN => 'Min length of this field must be {min}',
-            self::RULE_MAX => 'Max length of this field must be {max}',
+            self::RULE_MIN => 'Minimum length of this field must be {min}',
+            self::RULE_MAX => 'Maximum length of this field must be {max}',
             self::RULE_MATCH => 'This field must be the same as {match}',
             self::RULE_UNIQUE => 'Record with with this {field} already exists',
         ];
