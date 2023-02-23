@@ -22,9 +22,9 @@ class Form
         echo '</form>';
     }
 
-    public function field(Model $model, $attribute)
+    public function field(Model $model, $attribute, $placeholder = null)
     {
-        return new Field($model, $attribute);
+        return new Field($model, $attribute, $placeholder);
     }
     
     public function textArea(Model $model, $attribute)

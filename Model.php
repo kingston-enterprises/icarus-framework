@@ -25,7 +25,7 @@ class Model
     public function loadData($data)
     {
         foreach ($data as $key => $value) {
-            if (property_exists($this, $key)) {
+            if (property_exists($this, $key) && !empty($value)) {
                 $this->{$key} = $value;
             }
         }

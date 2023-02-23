@@ -5,17 +5,19 @@ namespace kingston\icarus\form;
 
 
 use kingston\icarus\Model;
-
+// TODO: Unit Test /form classes
 abstract class BaseField
 {
 
     public Model $model;
     public string $attribute;
+    public ?string $placeholder;
     public string $type;
-    public function __construct(Model $model, string $attribute)
+    public function __construct(Model $model, string $attribute, string $placeholder = null)
     {
         $this->model = $model;
         $this->attribute = $attribute;
+        $this->placeholder = $placeholder;
     }
 
     public function __toString()
