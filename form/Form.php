@@ -27,8 +27,8 @@ class Form
         return new Field($model, $attribute, $placeholder);
     }
     
-    public function textArea(Model $model, $attribute)
+    public function textArea(Model $model, $attribute, $placeholder = null, $rows)
     {
-        return new TextArea($model, $attribute);
+        return new TextArea($model, $attribute, $placeholder, $rows);
     }
 }

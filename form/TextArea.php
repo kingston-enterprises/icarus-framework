@@ -8,11 +8,13 @@ use kingston\icarus\Model;
 class TextArea extends BaseField
 {
     const TYPE_TEXT = 'text';
-    
-    public function __construct(Model $model, string $attribute)
+    public int $rows = 5;
+
+    public function __construct(Model $model, string $attribute, $placeholder, $rows)
     {
         $this->type = self::TYPE_TEXT;
-        parent::__construct($model, $attribute);
+        $this->rows = $rows;
+        parent::__construct($model, $attribute, $placeholder);
     }
 
     public function renderInput()
@@ -28,10 +30,11 @@ class TextArea extends BaseField
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-            " id="exampleFormControlTextarea13" rows="3" placeholder="%s" name="%s" value="%s"></textarea>',
+            "rows="%s" placeholder="%s" name="%s" value="%s"></textarea>',
             
             $this->model->hasError($this->attribute) ? ' text-red-500 hover:text-red-700' : '',
-            $this->attribute,
+            $this->rows,       
+            $this->placeholder ?? $this->attribute,
             $this->attribute,
             $this->model->{$this->attribute},
         );
