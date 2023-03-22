@@ -19,7 +19,7 @@ abstract class DbModel extends Model
     public function save()
     {
         $tableName = $this->tableName();
-        $attributes = $this->attributes(); // TODO: Update to getAttributes()
+        $attributes = $this->getAttributes();
         $params = array_map(fn($attr) => ":$attr", $attributes);
         $statement = self::prepare("INSERT INTO $tableName (" . implode(",", $attributes) . ") 
                 VALUES (" . implode(",", $params) . ")");
@@ -43,7 +43,9 @@ abstract class DbModel extends Model
     public function update(int $id)
     {
         $tableName = $this->tableName();
-        $attributes = $this->attributes(); // TODO: Update to getAttributes()
+        $attributes = $this->getAttributes();
+        var_dump($this->getAttributes());
+        exit();
         $params = array_map(fn($attr) => ":$attr", $attributes);
         $paramlist = $this->merge($attributes, $params);
      
