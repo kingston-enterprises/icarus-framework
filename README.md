@@ -1,6 +1,6 @@
 # Icarus framework
 
-Icarus was created with the goal of creating a lightweight, user-friendly framework to help accelerate the development of our clients' websites.
+Icarus was created with the goal of creating a lightweight, user-friendly framework to help accelerate the development websites.
 The idea is that we can simply install the tested code for the fundamental features when beginning a new client project and then simply build on that. 
 
 Basic features include:
@@ -9,7 +9,7 @@ Basic features include:
 - User Authentication
 
 Other notable feautures include:
-- Datatabse migrations
+- Datatabase migrations
 - MVC Architecture
 - Form Templates
  
@@ -23,7 +23,7 @@ Other notable feautures include:
 - you can install it along with your other composer packages
 
 ```sh
-$ composer require kingston/icarus
+composer require kingston/icarus
 ```
 
 ### Base Application
@@ -31,22 +31,22 @@ $ composer require kingston/icarus
 just clone the repository from [here](https://github.com/kingston-enterprises/base-application) and then run composer install
 
 ```sh
-$ composer install
+composer install
 ```
 
 -then open the `env.example` file, enter your database credentials and then save it as `env.`
 - Next just cd into your scripts directory and run the database migrations.
 
 ```sh
-$ cd scripts
-$ php migrations.php
+cd scripts
+php migrations.php
 ```
 
 - Next move into your public folder and start your php server.
 
 ```sh
-$ cd public
-$ php -S localhost:5050
+cd public
+php -S localhost:5050
 ```
 
 - then just open your localhost in your browser and you should see something like this and you will be good to go.

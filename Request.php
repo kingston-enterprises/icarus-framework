@@ -1,18 +1,40 @@
 <?php
-/** created by : kingston-5 @ 6/01/23 **/ 
+/** 
+ * @author kingston-5 <qhawe@kingston-enterprises.net>
+ * @package icarus
+ * @license For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace kingston\icarus;
 
-/* controlling class for all system requests */
+/**
+ * Controlling class for all system http requests.
+ */
 class Request {
+    /**
+     * http route parameters
+     *
+     * @var array
+     */
     private array $routeParams = [];
 
-    public function getMethod()
+    /**
+     * get server request method
+     *
+     * @return string
+     */
+    public function getMethod() : string
     {
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
 
-    public function getUrl()
+    /**
+     * get server request URI
+     *
+     * @return string
+     */
+    public function getUrl() : string
     {
         $path = $_SERVER['REQUEST_URI'];
         $position = strpos($path, '?');
@@ -22,17 +44,32 @@ class Request {
         return $path;
     }
 
-    public function isGet()
+    /**
+     * confirm http method is GET
+     *
+     * @return boolean
+     */
+    public function isGet() : bool
     {
         return $this->getMethod() === 'get';
     }
 
-    public function isPost()
+    /**
+     * confirm http method is POST
+     *
+     * @return boolean
+     */
+    public function isPost() : bool
     {
         return $this->getMethod() === 'post';
     }
 
-    public function getBody()
+    /**
+     * get http request $_GET or $_POST data
+     *
+     * @return array
+     */
+    public function getBody() : array
     {
         $data = [];
         if ($this->isGet()) {
@@ -45,27 +82,41 @@ class Request {
                 $data[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }
+        
         return $data;
     }
 
     /**
+     * set http route parameters
+     * 
      * @param $params
      * @return self
      */
-    public function setRouteParams($params)
+    public function setRouteParams($params) : self
     {
         $this->routeParams = $params;
         return $this;
     }
 
-    public function getRouteParams()
+    /** 
+     * get http route parameters
+     * 
+     * @return array
+     */
+    public function getRouteParams() : array
     {
         return $this->routeParams;
     }
 
-    public function getRouteParam($param, $default = null)
+    /**
+     * get http a single route parameters
+     *
+     * @param string    $param route parameter name
+     * @param null      $default default route paramter null
+     * @return string
+     */
+    public function getRouteParam($param, $default = null) : string
     {
         return $this->routeParams[$param] ?? $default;
     }
 }
-?>
