@@ -27,20 +27,22 @@ In this example all you have to do is define your config variables these are the
 Properties
 ----------
 properties:
-==========  ====================    ==================================
-const       EVENT_BEFORE_REQUEST    Before application request trigger
-==========  ====================    ==================================
 
-=====  =====  ======
-   Inputs     Output
-------------  ------
-  A      B    A or B
-=====  =====  ======
-False  False  False
-True   False  True
-False  True   True
-True   True   True
-=====  =====  ======
+===== ======        ====== ======                      ====== 
+const EVENT_BEFORE_REQUEST Before application request trigger
+===== ======        ====== ======                      ====== 
+const EVENT_BEFORE_REQUEST Before application request trigger
+===== ======        ====== ======                      ====== 
+const EVENT_BEFORE_REQUEST Before application request trigger
+===== ======        ====== ======                      ====== 
+const EVENT_BEFORE_REQUEST Before application request trigger
+===== ======        ====== ======                      ====== 
+const EVENT_BEFORE_REQUEST Before application request trigger
+===== ======        ====== ======                      ====== 
+const EVENT_BEFORE_REQUEST Before application request trigger
+===== ======        ====== ======                      ====== 
+const EVENT_BEFORE_REQUEST Before application request trigger
+===== ======        ====== ======                      ====== 
 
 Methods
 -------
