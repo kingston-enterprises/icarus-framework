@@ -23,6 +23,15 @@ Core
    - form templates
 
 ![Kingston Enterprises Icarus FrameWork Graphic](https://user-images.githubusercontent.com/67066977/215330853-7be454cf-66ed-4db3-b106-547f7c83bb2d.jpg)
+
+Prerequisites
+=============
+The whole idea behind the project is to have a framework with very few dependencies. 
+So all you will need is a php installation and composer
+
+dependencies
+------------
+   - `vlucas/phpdotenv`
    
 Installation
 ============
@@ -31,41 +40,58 @@ The suggested installation method is via `composer`_:
 
 .. code-block:: console
 
-   $ composer require kingston/icarus
+   composer require kingston/icarus
 
-## Getting Started
+Getting Started
+===============
 
-### Composer require
+Composer require
+----------------
+
 - to get started using icarus you can require it from composer.
 - you can install it along with your other composer packages
 
-```sh
-composer require kingston/icarus
-```
+.. code-block:: console
+   composer require kingston/icarus
 
-### Base Application
+
+Base Application
+----------------
 - The base application is our own template for getting started building icarus applications. to get started 
-just clone the repository from [here](https://github.com/kingston-enterprises/base-application) and then run composer install
+just clone the repository or use it as a template from [here](https://github.com/kingston-enterprises/base-application) and then run composer install
 
-```sh
-composer install
-```
+.. code-block:: console
+   composer install
 
 -then open the `env.example` file, enter your database credentials and then save it as `env.`
 - Next just cd into your scripts directory and run the database migrations.
 
-```sh
-cd scripts
-php migrations.php
-```
+.. code-block:: console
+   cd scripts
+   php migrations.php
+
 
 - Next move into your public folder and start your php server.
 
-```sh
-cd public
-php -S localhost:5050
-```
+.. code-block:: console
+   cd public
+   php -S localhost:5050
+
 
 - then just open your localhost in your browser and you should see something like this and you will be good to go.
 ![Kingston Enterprises Icarus FrameWork Welcome Screen](https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png)
+
+Licence
+=======
+MIT
+
+Contributing
+============
+any form of contributions are fully accepted, just open a github issue [here](https://github.com/kingston-enterprises/icarus-framework/issues)
+
+Contact
+=======
+contact us at:
+   - info@kingston-enterprises.net
+   - qhawe@kingston-enterprises.net
 

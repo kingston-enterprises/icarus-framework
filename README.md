@@ -57,3 +57,16 @@ php -S localhost:5050
 - then just open your localhost in your browser and you should see something like this and you will be good to go.
 ![Kingston Enterprises Icarus FrameWork Welcome Screen](https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png)
 
+### Contributing
+Any form of contributions are fully accepted, just open a github issue [here](https://github.com/kingston-enterprises/icarus-framework/issues)
+
+### Licence
+MIT
+
+### Contact
+contact us at:
+   - info@kingston-enterprises.net
+   - qhawe@kingston-enterprises.net
+
+### Documentation
+For more details read the docs [here](https://kingston-enterprises-icarus-framework.readthedocs.io/en/latest/)
