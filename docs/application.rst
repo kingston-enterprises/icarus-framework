@@ -25,11 +25,22 @@ example : starting the application - You want to do this in you `index.php`
 In this example all you have to do is define your config variables these are then passed along with the application root directory name to Application, and lastly you run the application.
 
 Properties
-==========
-==========  =============   ========
+----------
+properties:
+==========  ====================    ==================================
 const       EVENT_BEFORE_REQUEST    Before application request trigger
-==========  =============   ========
+==========  ====================    ==================================
 
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
 
 Methods
-=======
+-------

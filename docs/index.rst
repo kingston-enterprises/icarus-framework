@@ -1,4 +1,4 @@
-Welcome to Kingston Enterprises Icarus framwework documentation!
+Welcome to Kingston Enterprises Icarus framework documentation!
 ===================================
 
 We are a freelance software development company that specializes in providing our customers with high-quality software solutions. From personal and business websites to web-based enterprise applications, we offer a variety of services.
