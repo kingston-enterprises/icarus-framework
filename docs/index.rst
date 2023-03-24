@@ -1,8 +1,5 @@
 
-.. toctree::
-   :hidden:
-      index
-      application
+
 
 Welcome to Kingston Enterprises Icarus framework documentation!
 ===================================
@@ -16,6 +13,12 @@ Contents
 ========
 .. contents::
 
+
+.. toctree::
+   :hidden:
+      index
+      application
+      
 Introduction
 ============
 
@@ -121,4 +124,3 @@ Contact
 contact us at:
    - info@kingston-enterprises.net
    - qhawe@kingston-enterprises.net
-
