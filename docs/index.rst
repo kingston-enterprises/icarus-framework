@@ -9,7 +9,7 @@ Together, they form a light foundation for any of our customer projects.
 
 Inspiration
 ===========
-Abig thank you to the `codeholic <https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
+A big thank you to the `codeholic <https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
 
 Project Scope
 

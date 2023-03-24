@@ -4,7 +4,7 @@ Icarus was built with the intention of producing a lightweight, user-friendly fr
 The idea is that when starting a fresh c project, we can simply install the tested code for the essential functionalities and then build on that. 
 
 ## Inspiration
-A big thank you to the `codeholic <https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
+A big thank you to the [codeholic](https://github.com/thecodeholic/php-mvc-framework) on GitHub for inspiring and guiding the creation of this project with his youtube [tutorials](https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1)
 
 
 ##
