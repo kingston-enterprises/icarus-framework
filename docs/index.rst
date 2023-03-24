@@ -11,11 +11,12 @@ By partnering with us, you can be assured that the solutions we provide are tail
 
 Contents
 ========
-.. contents::
-
+.. contents:: Table of Contents
+   :local:
 
 .. toctree::
    :hidden:
+   
    index
    application
       
