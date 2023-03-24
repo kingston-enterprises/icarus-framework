@@ -11,10 +11,9 @@ By partnering with us, you can be assured that the solutions we provide are tail
 
 Contents
 ========
+.. contents::
 
 .. toctree::
-   
-   index
    application
       
 Introduction
