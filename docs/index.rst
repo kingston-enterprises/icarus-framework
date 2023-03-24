@@ -7,6 +7,10 @@ The project consists primarily of a custom MVC core and a base application templ
 The template already has all of the basic features constructed and tested, in addition to the core, which is fully built and tested. 
 Together, they form a light foundation for any of our customer projects.
 
+Inspiration
+===========
+Abig thank you to the `codeholic <https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
+
 Project Scope
 
 - Base application
@@ -22,7 +26,11 @@ Core
    - custom routing
    - form templates
 
-![Kingston Enterprises Icarus FrameWork Graphic](https://user-images.githubusercontent.com/67066977/215330853-7be454cf-66ed-4db3-b106-547f7c83bb2d.jpg)
+.. image:: https://user-images.githubusercontent.com/67066977/215330853-7be454cf-66ed-4db3-b106-547f7c83bb2d.jpg
+   :height: 200
+   :width: 200
+   :scale: 50
+   :alt: Kingston Enterprises Icarus FrameWork Graphic
 
 Prerequisites
 =============
@@ -58,7 +66,7 @@ Composer require
 Base Application
 ----------------
 - The base application is our own template for getting started building icarus applications. to get started 
-just clone the repository or use it as a template from [here](https://github.com/kingston-enterprises/base-application) and then run composer install
+just clone the repository or use it as a template from `here <https://github.com/kingston-enterprises/base-application>` and then run composer install
 
 .. code-block:: console
    composer install
@@ -79,7 +87,11 @@ just clone the repository or use it as a template from [here](https://github.com
 
 
 - then just open your localhost in your browser and you should see something like this and you will be good to go.
-![Kingston Enterprises Icarus FrameWork Welcome Screen](https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png)
+.. image:: https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png
+   :height: 200
+   :width: 200
+   :scale: 50
+   :alt: Kingston Enterprises Icarus FrameWork Welcome Screen
 
 Licence
 =======
@@ -87,7 +99,7 @@ MIT
 
 Contributing
 ============
-any form of contributions are fully accepted, just open a github issue [here](https://github.com/kingston-enterprises/icarus-framework/issues)
+any form of contributions are fully accepted, just open a github issue `here <https://github.com/kingston-enterprises/icarus-framework/issues>`_
 
 Contact
 =======
