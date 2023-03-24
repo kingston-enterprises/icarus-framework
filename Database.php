@@ -86,9 +86,9 @@ class Database
     /**
      * get applied migrations from database
      *
-     * @return void
+     * @return array|false
      */
-    protected function getAppliedMigrations()
+    protected function getAppliedMigrations() : array|false
     {
         $statement = $this->pdo->prepare("SELECT migration FROM migrations");
         $statement->execute();
