@@ -16,8 +16,8 @@ Contents
 
 .. toctree::
    :hidden:
-      index
-      application
+   index
+   application
       
 Introduction
 ============
