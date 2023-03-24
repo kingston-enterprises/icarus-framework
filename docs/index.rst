@@ -20,6 +20,6 @@ Contents
 
    introduction
    application
-   controllers
+   controller
    database
       
