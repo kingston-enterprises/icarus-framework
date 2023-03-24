@@ -1,17 +1,22 @@
 # Icarus framework
 
-Icarus was created with the goal of creating a lightweight, user-friendly framework to help accelerate the development websites.
-The idea is that we can simply install the tested code for the fundamental features when beginning a new client project and then simply build on that. 
+Icarus was built with the intention of producing a lightweight, user-friendly framework to aid in the building of websites.
+The idea is that when starting a fresh c project, we can simply install the tested code for the essential functionalities and then build on that. 
 
-Basic features include:
-- Custom Routing
-- Vitisor Counter
-- User Authentication
+Project Scope
 
-Other notable feautures include:
-- Datatabase migrations
-- MVC Architecture
-- Form Templates
+- Base application
+   - Secured migration based database
+   - Secured user login and registration
+   - simple user profile dashboard
+   - simple user profile settings and controls
+   - site visitor counter 
+
+Core
+   - mvc architecture
+   - `.env` database connection
+   - custom routing
+   - form templates
  
 
 ![Kingston Enterprises Icarus FrameWork Graphic](https://user-images.githubusercontent.com/67066977/215330853-7be454cf-66ed-4db3-b106-547f7c83bb2d.jpg)
