@@ -10,7 +10,8 @@
 namespace kingston\icarus;
 
 /**
- * Main interface between models and views
+ * Parent Class for all controllers
+ * Controllers group related request handling logic into a single class
  */
 class Controller {
 

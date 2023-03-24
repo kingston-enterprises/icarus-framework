@@ -20,4 +20,5 @@ Contents
 
    introduction
    application
+   controllers
       
