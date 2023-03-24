@@ -1,28 +1,91 @@
 <?php
 
-/** created by : kingston-5 @ 6/01/23 **/
+/** 
+ * @author kingston-5 <qhawe@kingston-enterprises.net>
+ * @package icarus
+ * @license For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace kingston\icarus;
 
-
-/** @class Model: parent class to interface with database tables
- * @no-named-arguments
+/**
+ * parent class to interface with database tables
+ * 
  */
 class Model
 {
+    /**
+     * required field validation rule 
+     *
+     * @var string
+     */
     const RULE_REQUIRED = 'required';
+
+    /** email field validation rule
+     *
+     * @var string
+     */
     const RULE_EMAIL = 'email';
+
+    /** field characters validation rule
+     *
+     * @var string
+     */
     const RULE_MIN = 'min';
+
+    /** max field validation characters rule 
+     *
+     * @var string
+     */
     const RULE_MAX = 'max';
+
+    /** matching field validation rule 
+     *
+     * @var string
+     */
     const RULE_MATCH = 'match';
+
+    /** unique field validation rule 
+     *
+     * @var string
+     */
     const RULE_UNIQUE = 'unique';
 
+    /** validation errors
+     *
+     * @var array
+     */
     protected array $errors = [];
+
+    /**
+     * model attributes
+     *
+     * @var array
+     */
     protected array $attributes = [];
+
+    /**
+     * form labels
+     *
+     * @var array
+     */
     protected array $labels = [];
+
+    /** 
+     * validation rules
+     * 
+     * @var array
+     */
     protected array $rules = [];
 
-    public function loadData($data)
+    /**
+     * load data into model attributes
+     *
+     * @param arrray    $data data array
+     * @return void
+     */
+    public function loadData($data) : void
     {
         foreach ($data as $key => $value) {
             if (property_exists($this, $key) && !empty($value)) {
@@ -31,29 +94,56 @@ class Model
         }
     }
 
-    public function setAttributes($attributes)
+    /**
+     * set model attributes that can be assigned
+     *
+     * @param array     $attributes attibutes array
+     * @return void
+     */
+    public function setAttributes($attributes) : void
     {
         $this->attributes = $attributes;
     }
 
-    public function getAttributes()
+    /**
+     * get model attributes
+     *
+     * @return array
+     */
+    public function getAttributes() : array
     {
         return $this->attributes;
     }
 
-    public function setLabels($labels)
+    /**
+     * set form labels
+     *
+     * @param array $labels
+     * @return void
+     */
+    public function setLabels($labels) : void
     {
         $this->labels = $labels;
     }
 
-    public function getLabel($attribute)
+    /**
+     * get specific form label
+     *
+     * @param string $attribute attribute name
+     * @return string
+     */
+    public function getLabel($attribute) : string
     {
         return $this->labels[$attribute] ?? $attribute;
     }
 
-    public function setRules($rules)
+    /**
+     * set form validation rules
+     * @return void
+     */
+    public function setRules($rules) : void
     {
-        foreach ($rules as $key => $rule) {
+        foreach ($rules as $key) {
             if (!property_exists($this, $key)) {
                 unset($rules[$key]);
             }
@@ -61,11 +151,22 @@ class Model
         $this->rules = $rules;
     }
 
-    public function getRules()
+    /**
+     * get form validation rules
+     *
+     * @return array
+     */
+    public function getRules() : array
     {
         return $this->rules;
     }
 
+    /**
+     * validation of form values to rules
+     *
+     * @param array     $ignore array of values to ignore
+     * @return void
+     */
     public function validate(array $ignore = [])
     {
         foreach ($this->getRules() as $attribute => $rules) {
@@ -110,11 +211,16 @@ class Model
                 }
             }
         }
-        
+
         return empty($this->errors);
     }
 
-    public function errorMessages()
+    /**
+     * return all error messages for validation rules
+     *
+     * @return array
+     */
+    public function errorMessages() : array
     {
         return [
             self::RULE_REQUIRED => '{field} is required',
@@ -126,12 +232,26 @@ class Model
         ];
     }
 
+    /**
+     * get specific error message
+     *
+     * @param string $rule
+     * @return string
+     */
     public function errorMessage($rule)
     {
         return $this->errorMessages()[$rule];
     }
 
-    protected function addErrorByRule(string $attribute, string $rule, $params = [])
+    /**
+     * add Error by railed validation rule
+     *
+     * @param string $attribute atribute under validation
+     * @param string $rule  rule to validate attribute
+     * @param array $params validation parameters to include in error message
+     * @return void
+     */
+    protected function addErrorByRule(string $attribute, string $rule, $params = []) : void
     {
         $params['field'] ??= $attribute;
         $errorMessage = $this->errorMessage($rule);
@@ -141,17 +261,36 @@ class Model
         $this->errors[$attribute][] = $errorMessage;
     }
 
-    public function addError(string $attribute, string $message)
+    /**
+     * add error message to list of accrued errors during validation
+     *
+     * @param string $attribute attribute that vaied validation
+     * @param string $message error message
+     * @return void
+     */
+    public function addError(string $attribute, string $message) : void
     {
         $this->errors[$attribute][] = $message;
     }
 
-    public function hasError($attribute)
+    /**
+     * check if attribute has error
+     *
+     * @param string $attribute
+     * @return boolean
+     */
+    public function hasError($attribute) : bool
     {
         return $this->errors[$attribute] ?? false;
     }
 
-    public function getFirstError($attribute)
+    /**
+     * get first error
+     *
+     * @param  $attribute
+     * @return string
+     */
+    public function getFirstError($attribute) : string
     {
         $errors = $this->errors[$attribute] ?? [];
         return $errors[0] ?? '';

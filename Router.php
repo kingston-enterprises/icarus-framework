@@ -1,27 +1,72 @@
 <?php
-/** created by : kingston-5 @ 6/01/23 **/ 
+/** 
+ * @author kingston-5 <qhawe@kingston-enterprises.net>
+ * @package icarus
+ * @license For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace kingston\icarus;
 
 use kingston\icarus\exception\NotFoundException;
 
-/* url router*/
+/**
+ * Custom URL router
+ */
 class Router {
+
+    /**
+     * the Request instance
+     *
+     * @var Request
+     */
     private Request $request;
+
+    /**
+     * the response instance
+     *
+     * @var Response
+     */
     private Response $response;
+
+    /**
+     * request route map
+     *
+     * @var array
+     */
     private array $routeMap = [];
 
+    /**
+     * instantiate request an response
+     *
+     * @param Request $request
+     * @param Response $response
+     */
     public function __construct(Request $request, Response $response)
     {
         $this->request = $request;
         $this->response = $response;
     }
 
-    public function get(string $url, $callback)
+    /**
+     * set get method URL and callback function
+     *
+     * @param string $url
+     * @param array $callback
+     * @return void
+     */
+    public function get(string $url, $callback) : void
     {
         $this->routeMap['get'][$url] = $callback;
     }
 
+    /**
+     * set post method URL and callback function
+     *
+     * @param string $url
+     * @param array $callback
+     * @return void
+     */
     public function post(string $url, $callback)
     {
         $this->routeMap['post'][$url] = $callback;
@@ -35,8 +80,12 @@ class Router {
         return $this->routeMap[$method] ?? [];
     }
 
-    // get route callback funtion
-    public function getCallback()
+    /**
+     * get route callback funtion
+     *
+     * @return string|bool
+     */
+    public function getCallback() : string|bool
     {
         $method = $this->request->getMethod();
         $url = $this->request->getUrl();
@@ -82,7 +131,12 @@ class Router {
         return false;
     }
 
-    public function resolve()
+    /**
+     * call route callback function
+     *
+     * @return mixed
+     */
+    public function resolve() : mixed
     {
         $method = $this->request->getMethod();
         $url = $this->request->getUrl();
@@ -114,12 +168,26 @@ class Router {
         return call_user_func($callback, $this->request, $this->response);
     }
 
-    public function renderView($view, $params = [])
+    /** 
+     * render Route full view
+     * 
+     * @param string $view
+     * @param array $params
+     * @return string
+    */
+    public function renderView($view, $params = []) : string
     {
         return Application::$app->view->renderView($view, $params);
     }
 
-    public function renderViewOnly($view, $params = [])
+    /**
+     * render route view content
+     *
+     * @param string $view
+     * @param array $params
+     * @return string
+     */
+    public function renderViewOnly($view, $params = []) : string
     {
         return Application::$app->view->renderViewOnly($view, $params);
     }

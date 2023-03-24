@@ -1,14 +1,33 @@
 <?php
-/** created by : kingston-5 @ 7/01/23 **/ 
+/** 
+ * @author kingston-5 <qhawe@kingston-enterprises.net>
+ * @package icarus
+ * @license For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace kingston\icarus;
 
-// represents the sites views
+/**
+ * View Render class
+ */
 class View
 {
+    /**
+     * view title
+     *
+     * @var string
+     */
     public string $title = '';
 
-    public function renderView($view, array $params)
+    /** 
+     * render Route full view
+     * 
+     * @param string $view
+     * @param array $params
+     * @return string
+    */
+    public function renderView($view, array $params) : string
     {
         $layoutName = Application::$app->layout;
         if (Application::$app->controller) {
@@ -21,7 +40,14 @@ class View
         return str_replace('{{content}}', $viewContent, $layoutContent);
     }
 
-    public function renderViewOnly($view, array $params)
+    /**
+     * render route view content
+     *
+     * @param string $view
+     * @param array $params
+     * @return string
+     */
+    public function renderViewOnly($view, array $params) : string
     {
         foreach ($params as $key => $value) {
             $$key = $value;

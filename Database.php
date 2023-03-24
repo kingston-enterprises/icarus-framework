@@ -1,5 +1,10 @@
 <?php
-/** created by : kingston-5 @ 8/01/23 **/ 
+/** 
+ * @author kingston-5 <qhawe@kingston-enterprises.net>
+ * @package icarus
+ * @license For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace kingston\icarus;
 
@@ -8,8 +13,18 @@ namespace kingston\icarus;
  */
 class Database
 {
+    /**
+     * PDO instance
+     *
+     * @var \PDO
+     */
     public \PDO $pdo;
 
+    /**
+     * start PDO instance
+     *
+     * @param array $dbConfig
+     */
     public function __construct($dbConfig = [])
     {
         $dbDsn = $dbConfig['dsn'] ?? '';
@@ -20,6 +35,11 @@ class Database
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 
+    /**
+     * apply any outstanding migrations
+     *
+     * @return void
+     */
     public function applyMigrations()
     {
         $this->createMigrationsTable();
@@ -49,7 +69,12 @@ class Database
         }
     }
 
-    protected function createMigrationsTable()
+    /**
+     * create Migrations table
+     *
+     * @return void
+     */
+    protected function createMigrationsTable() : void
     {
         $this->pdo->exec("CREATE TABLE IF NOT EXISTS migrations (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,6 +83,11 @@ class Database
         )  ENGINE=INNODB;");
     }
 
+    /**
+     * get applied migrations from database
+     *
+     * @return void
+     */
     protected function getAppliedMigrations()
     {
         $statement = $this->pdo->prepare("SELECT migration FROM migrations");
@@ -66,6 +96,12 @@ class Database
         return $statement->fetchAll(\PDO::FETCH_COLUMN);
     }
 
+    /**
+     * insert applied migration into table
+     *
+     * @param array $newMigrations
+     * @return void
+     */
     protected function saveMigrations(array $newMigrations)
     {
         $str = implode(',', array_map(fn($m) => "('$m')", $newMigrations));
@@ -75,11 +111,20 @@ class Database
         $statement->execute();
     }
     
+    /**
+     * prepare sql statement
+     *
+     * @param string $sql
+     * @return \PDOStatement
+     */
     public function prepare($sql): \PDOStatement
     {
         return $this->pdo->prepare($sql);
     }
 
+    /**
+     * log erros to output
+     */
     private function log($message)
     {
         echo "[" . date("Y-m-d H:i:s") . "] - " . $message . PHP_EOL;
