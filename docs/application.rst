@@ -1,8 +1,10 @@
 Application
 ===========
 
-`kingston\icarus\Application`
-`class Application`
+.. code-block:: console
+
+  `kingston\icarus\Application`
+  `class Application`
 
 Main framework  backbone everything starts, ends or goes through here.
   
@@ -12,6 +14,7 @@ every major class is connected to this one.
 example : starting the application - You want to do this in you `index.php`
     
 .. code-block:: console
+
     $config = [ 'database' => [
         'dsn' => 'database_name',
         'user' => 'database_user',
