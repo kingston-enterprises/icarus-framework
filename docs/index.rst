@@ -10,10 +10,6 @@ Contents
 ========
 .. contents::
 
-.. toctree::
-   index
-   application
-
 Introduction
 ============
 
@@ -120,3 +116,6 @@ contact us at:
    - info@kingston-enterprises.net
    - qhawe@kingston-enterprises.net
 
+.. toctree::
+   index
+   application
