@@ -29,7 +29,6 @@ In this example all you have to do is define your config variables these are the
 
 Properties
 ----------
-properties:
 
 +----------+----------+----------+
 | Header 1 | Header 2 | Header 3 |
@@ -47,7 +46,7 @@ Methods
 
 try to show the requested view
 
-return
+*return*
 
     void
 
@@ -59,16 +58,16 @@ return
 
 Call or trigger an event`s callback function
 
-Parameters
+*Parameters*
 
-+--------------------+--------------------+
-|                    |                    |
-+====================+====================+
-| string             | $eventName         | 
-+--------------------+--------------------+
+  +--------------------+--------------------+
+  |                    |                    |
+  +====================+====================+
+  | string             | $eventName         | 
+  +--------------------+--------------------+
 
 
-return
+*return*
 
     void
 
