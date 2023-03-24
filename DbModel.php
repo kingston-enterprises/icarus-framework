@@ -68,7 +68,7 @@ abstract class DbModel extends Model
 
 
     /**
-     * merge to arrays whike filling in the missing elements
+     * merge to arrays whikl filling in the missing elements
      *
      * @param array     $arr1 array with missing elements
      * @param array     $arr2 array with new elements
@@ -136,7 +136,7 @@ abstract class DbModel extends Model
 
 
     /**
-     * select all recordss from table that meet condition
+     * select all records from table that meet condition
      *
      * @param array     $where 2D array of conditions
      * @return array

@@ -10,7 +10,6 @@ Parent Class for all controllers
 Controllers group related request handling logic into a single class
 
 .. note:: Depracated since v23.03.22
-    These elements have been Depracated:
     $action
 
 Properties
