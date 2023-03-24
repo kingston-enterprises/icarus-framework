@@ -7,21 +7,11 @@ By partnering with us, you can be assured that the solutions we provide are tail
 
 
 Contents
---------
-`Introduction`
-`Inspiration`
-`Project Scope`
-`Prerequisites`
-   `dependencies`
-`Installation`
-`Getting Started`
-   `Composer require`
-   `Base Application`
-`Licence`
-`Contributing`
-`Contact`
+========
+.. contents::
 
 .. toctree::
+   index
    application
 
 Introduction
