@@ -9,7 +9,7 @@ Together, they form a light foundation for any of our customer projects.
 
 Inspiration
 ===========
-A big thank you to the :ref:`codeholic https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
+A big thank you to the :ref:`codeholic <https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
 
 Project Scope
 
@@ -85,9 +85,6 @@ just clone the repository or use it as a template from `here <https://github.com
 
 - then just open your localhost in your browser and you should see something like this and you will be good to go.
 .. image:: https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png
-   :height: 200
-   :width: 200
-   :scale: 50
    :alt: Kingston Enterprises Icarus FrameWork Welcome Screen
 
 Licence
