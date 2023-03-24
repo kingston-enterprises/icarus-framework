@@ -6,8 +6,20 @@ We understand that companies are looking for solutions to reach the next level, 
 By partnering with us, you can be assured that the solutions we provide are tailored to your exact needs and requirements 
 
 
-#Contents
+Contents
 --------
+`Introduction`
+`Inspiration`
+`Project Scope`
+`Prerequisites`
+   `dependencies`
+`Installation`
+`Getting Started`
+   `Composer require`
+   `Base Application`
+`Licence`
+`Contributing`
+`Contact`
 
 .. toctree::
    application
@@ -26,8 +38,10 @@ Inspiration
 A big thank you to the `Codeholic <https://github.com/thecodeholic/php-mvc-framework>`_ on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>`_ 
 
 Project Scope
+=============
 
-- Base application
+Base application
+----------------
    - Secured migration based database
    - Secured user login and registration
    - simple user profile dashboard
@@ -35,6 +49,7 @@ Project Scope
    - site visitor counter 
 
 Core
+----
    - mvc architecture
    - `.env` database connection
    - custom routing
