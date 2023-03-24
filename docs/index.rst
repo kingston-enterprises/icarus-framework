@@ -9,7 +9,7 @@ Together, they form a light foundation for any of our customer projects.
 
 Inspiration
 ===========
-A big thank you to the `Codeholic <https://github.com/thecodeholic/php-mvc-framework>`_ on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
+A big thank you to the `Codeholic <https://github.com/thecodeholic/php-mvc-framework>`_ on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>`_ 
 
 Project Scope
 
@@ -63,7 +63,7 @@ Composer require
 Base Application
 ----------------
 - The base application is our own template for getting started building icarus applications. to get started 
-just clone the repository or use it as a template from `here <https://github.com/kingston-enterprises/base-application>` and then run composer install
+just clone the repository or use it as a template from `here <https://github.com/kingston-enterprises/base-application>`_ and then run composer install
 
 .. code-block:: console
    composer install
