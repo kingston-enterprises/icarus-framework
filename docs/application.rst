@@ -28,21 +28,43 @@ Properties
 ----------
 properties:
 
-===== ======        ====== ======                      ====== 
-const EVENT_BEFORE_REQUEST Before application request trigger
-===== ======        ====== ======                      ====== 
-const EVENT_BEFORE_REQUEST Before application request trigger
-===== ======        ====== ======                      ====== 
-const EVENT_BEFORE_REQUEST Before application request trigger
-===== ======        ====== ======                      ====== 
-const EVENT_BEFORE_REQUEST Before application request trigger
-===== ======        ====== ======                      ====== 
-const EVENT_BEFORE_REQUEST Before application request trigger
-===== ======        ====== ======                      ====== 
-const EVENT_BEFORE_REQUEST Before application request trigger
-===== ======        ====== ======                      ====== 
-const EVENT_BEFORE_REQUEST Before application request trigger
-===== ======        ====== ======                      ====== 
++----------+----------+----------+
+| Header 1 | Header 2 | Header 3 |
++==========+==========+==========+
+| | Item 1 |          |          |
+| | Item 2 |          |          |
++----------+----------+----------+
 
 Methods
 -------
+
+.. code-block:: console
+    public function run(): void
+
+try to show the requested view
+
+return
+
+    void
+
+***
+
+.. code-block:: console
+    public function triggerEvent($eventName): void
+
+Call or trigger an event`s callback function
+
+Parameters
+
++--------------------+--------------------+
+|                    |                    |
++====================+====================+
+| string             | $eventName         | 
++--------------------+--------------------+
+
+
+return
+
+    void
+
+***

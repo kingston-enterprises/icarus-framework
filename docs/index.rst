@@ -18,7 +18,7 @@ Introduction
 This framework offers a lightweight solution to kickstart php applications while also preparing them for faster and cleaner development.
 
 The project consists primarily of a custom MVC core and a base application template.
-The template already has all of the basic features constructed and tested, in addition to the core, which is fully built and tested. 
+The template already has all of the basic features constructed and tested, in addition to the core, which is fully built and tested.
 Together, they form a light foundation for any of our customer projects.
 
 Inspiration
