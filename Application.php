@@ -34,13 +34,13 @@ class Application
 {
 
     /**
-     * Before application request trigger
+     * Before app request event trigger 
      *
      * @var string
      */
     const EVENT_BEFORE_REQUEST = 'beforeRequest';
 
-    /** After application request trigger
+    /** After app request event trigger 
      *
      * @var string
      */
@@ -138,7 +138,7 @@ class Application
     public string $layout = 'main';
 
     /**
-     * Bootstrap application
+     * Create new Application instance
      *
      * @param string    $rootDir application root directory
      * @param string    $config important config variables
@@ -165,7 +165,7 @@ class Application
      * @return void
      * 
      */
-    public function run(): void
+    public function run() : void
     {
         try {
             echo $this->router->resolve();
@@ -182,7 +182,7 @@ class Application
      * @param string $eventName
      * @return void
      */
-    public function triggerEvent($eventName): void
+    public function triggerEvent($eventName) : void
     {
         $callbacks = $this->eventListeners[$eventName] ?? [];
         foreach ($callbacks as $callback) {
@@ -194,7 +194,7 @@ class Application
      * assign callback function to event listener 
      * @return void
      * */
-    public function on($eventName, $callback): void
+    public function on($eventName, $callback) : void
     {
         $this->eventListeners[$eventName][] = $callback;
     }
@@ -204,7 +204,7 @@ class Application
      *
      * @return boolean
      */
-    public static function isGuest(): bool
+    public static function isGuest() : bool
     {
         return !self::$app->session->get('user');
     }
