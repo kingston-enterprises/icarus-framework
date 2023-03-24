@@ -42,6 +42,7 @@ Methods
 -------
 
 .. code-block:: console
+
     public function run(): void
 
 try to show the requested view
@@ -50,9 +51,10 @@ return
 
     void
 
-***
+* * *
 
 .. code-block:: console
+
     public function triggerEvent($eventName): void
 
 Call or trigger an event`s callback function
@@ -70,4 +72,4 @@ return
 
     void
 
-***
+* * *
