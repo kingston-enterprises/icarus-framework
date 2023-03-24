@@ -9,7 +9,7 @@ Together, they form a light foundation for any of our customer projects.
 
 Inspiration
 ===========
-A big thank you to the `codeholic <https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
+A big thank you to the :ref:`codeholic https://github.com/thecodeholic/php-mvc-framework>_` on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>_` 
 
 Project Scope
 
@@ -27,9 +27,6 @@ Core
    - form templates
 
 .. image:: https://user-images.githubusercontent.com/67066977/215330853-7be454cf-66ed-4db3-b106-547f7c83bb2d.jpg
-   :height: 200
-   :width: 200
-   :scale: 50
    :alt: Kingston Enterprises Icarus FrameWork Graphic
 
 Prerequisites
