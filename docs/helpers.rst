@@ -3,7 +3,7 @@ Helpers
 
 
 Collection
-==========
+----------
 
 .. code-block:: console
 
@@ -13,14 +13,14 @@ Collection
 class Collection is an easy wrapper for working with arrays of data
 
 Properties
-----------
+++++++++++
 
 +--------------------+----------------------------------------+------------------------------------------------------------+
 | protected array    | $items                                 | items in collection                                        |
 +--------------------+----------------------------------------+------------------------------------------------------------+
 
 Methods
--------
+++++++++++
 
 .. code-block:: console
 

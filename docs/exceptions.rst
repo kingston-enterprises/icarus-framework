@@ -12,7 +12,7 @@ ForbiddenException
 Class ForbiddenException
 
 Properties
-----------
+++++++++++
 
 +--------------------+----------------------------------------+------------------------------------------------------------+
 | protected string   | $message                               |Please Log In to To Perfomr that action                     |
@@ -33,7 +33,7 @@ NotFoundException
 Class NotFoundException
 
 Properties
-----------
+++++++++++
 
 +--------------------+----------------------------------------+------------------------------------------------------------+
 | protected string   | $message                               |Page not found                                              |
