@@ -67,7 +67,7 @@ class Router {
      * @param array $callback
      * @return void
      */
-    public function post(string $url, $callback)
+    public function post(string $url, $callback) : void
     {
         $this->routeMap['post'][$url] = $callback;
     }
@@ -75,7 +75,7 @@ class Router {
     /**
      * @return array
      */
-    public function getRouteMap($method): array
+    public function getRouteMap($method) : array
     {
         return $this->routeMap[$method] ?? [];
     }
@@ -181,7 +181,7 @@ class Router {
     }
 
     /**
-     * render route view content
+     * render route view content only
      *
      * @param string $view
      * @param array $params

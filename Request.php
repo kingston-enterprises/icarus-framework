@@ -109,7 +109,7 @@ class Request {
     }
 
     /**
-     * get http a single route parameters
+     * get a single http route parameter
      *
      * @param string    $param route parameter name
      * @param null      $default default route paramter null
