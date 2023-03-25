@@ -38,7 +38,7 @@ class Form
      *
      * @return void
      */
-    public static function end()
+    public static function end() : void
     {
         echo '</form>';
     }

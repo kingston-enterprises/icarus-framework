@@ -1,4 +1,5 @@
 <?php
+
 /** 
  * @author kingston-5 <qhawe@kingston-enterprises.net>
  * @package icarus\exception
@@ -34,7 +35,7 @@ class Field extends BaseField
      * @var string
      */
     const TYPE_DATETIME = 'datetime-local';
-    
+
     /** start parent class instance */
     public function __construct(Model $model, string $attribute, $placeholder)
     {
@@ -43,9 +44,10 @@ class Field extends BaseField
     }
 
     /** render input */
-    public function renderInput()
+    public function renderInput(): string
     {
-        return sprintf('<input type="%s" class="form-control %s block w-full px-3 py-1.5 text-base font-bold text-orange-700 bg-white 
+        return sprintf(
+            '<input type="%s" class="form-control %s block w-full px-3 py-1.5 text-base font-bold text-orange-700 bg-white 
         bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 
         focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="%s" name="%s" value="%s"/>',
             $this->type,
@@ -61,7 +63,7 @@ class Field extends BaseField
      *
      * @return Field
      */
-    public function passwordField()
+    public function passwordField() : Field
     {
         $this->type = self::TYPE_PASSWORD;
         return $this;
@@ -72,10 +74,9 @@ class Field extends BaseField
      *
      * @return Field
      */
-    public function dateTimeField()
+    public function dateTimeField() : Field
     {
         $this->type = self::TYPE_DATETIME;
         return $this;
     }
-
 }

@@ -12,7 +12,7 @@ use kingston\icarus\Model;
 
 /**
  * TextArea class
- * @extends \BAseField
+ * @extends \BaseField
  */
 class TextArea extends BaseField
 {

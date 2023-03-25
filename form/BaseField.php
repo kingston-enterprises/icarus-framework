@@ -35,7 +35,7 @@ abstract class BaseField
     public string $attribute;
 
     /**
-     * field placehlder
+     * field placeholder
      *
      * @var string|null
      */
