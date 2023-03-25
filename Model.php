@@ -22,7 +22,7 @@ class Model
      */
     const RULE_REQUIRED = 'required';
 
-    /** email field validation rule
+    /** RULE_EMAIL
      *
      * @var string
      */
@@ -82,7 +82,7 @@ class Model
     /**
      * load data into model attributes
      *
-     * @param arrray    $data data array
+     * @param array    $data data array
      * @return void
      */
     public function loadData($data) : void
@@ -165,9 +165,9 @@ class Model
      * validation of form values to rules
      *
      * @param array     $ignore array of values to ignore
-     * @return void
+     * @return bool
      */
-    public function validate(array $ignore = [])
+    public function validate(array $ignore = []) : bool
     {
         foreach ($this->getRules() as $attribute => $rules) {
             $value = $this->{$attribute};
@@ -238,13 +238,13 @@ class Model
      * @param string $rule
      * @return string
      */
-    public function errorMessage($rule)
+    public function errorMessage($rule) : string
     {
         return $this->errorMessages()[$rule];
     }
 
     /**
-     * add Error by railed validation rule
+     * add Error by failed validation rule
      *
      * @param string $attribute atribute under validation
      * @param string $rule  rule to validate attribute
@@ -287,7 +287,7 @@ class Model
     /**
      * get first error
      *
-     * @param  $attribute
+     * @param  string $attribute
      * @return string
      */
     public function getFirstError($attribute) : string

@@ -23,4 +23,5 @@ Contents
    controller
    database
    dbmodel
+   model
       
