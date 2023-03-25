@@ -30,4 +30,5 @@ Contents
    view
    form
    exceptions
+   helpers
       
