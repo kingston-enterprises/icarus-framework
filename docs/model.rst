@@ -1,5 +1,5 @@
 Model
-===========
+=====
 
 .. code-block:: console
 
