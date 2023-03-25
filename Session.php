@@ -14,7 +14,7 @@ namespace kingston\icarus;
 class Session
 {
     /**
-     * session flash message key
+     * session flash messages key
      * @var string
      */
     protected const FLASH_KEY = 'flash_messages';
@@ -95,7 +95,7 @@ class Session
     }
 
     /**
-     * destroy falash messages in instance
+     * destroy flash messages in instance
      */
     public function __destruct()
     {

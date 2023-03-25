@@ -26,4 +26,6 @@ Contents
    model
    request
    router
+   session
+   view
       
