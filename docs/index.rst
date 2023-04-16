@@ -12,9 +12,6 @@ By partnering with us, you can be assured that the solutions we provide are tail
 
 Contents
 --------
-    :maxdepth: 2
-
-    narr/introduction
 .. toctree::
    :maxdepth: 2
 

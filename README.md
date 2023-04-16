@@ -15,7 +15,8 @@ The idea is that when starting a fresh client project, we can simply install the
 composer require kingston/icarus
 ```
 
-### Base Application
+## Base Application
+
 - The base application is our own template for getting started building icarus applications. to get started 
 just clone the repository from [here](https://github.com/kingston-enterprises/base-application) and then run composer install
 
@@ -41,20 +42,20 @@ php -S localhost:5050
 - then just open your localhost in your browser and you should see something like this and you will be good to go.
 ![Kingston Enterprises Icarus FrameWork Welcome Screen](https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png)
 
-### Contributing
+## Contributing
 
 Any form of contributions are fully accepted, just Future versions of this framework are planned, with massive extensions to the logic side of things. we welcome any and all contributions, so please feel free to contribute. If you have ideas for the direction that the framework should take, please don't hesitate to open a github issue [here](https://github.com/kingston-enterprises/icarus-framework/issues) or just directy get in touch with the creatr [here](mailto:qhawem54@gmail.com).
 
 
-### Acknowledgements
+## Acknowledgements
 
 A big thank you to the [codeholic](https://github.com/thecodeholic/php-mvc-framework) on GitHub for inspiring and guiding the creation of this project with his youtube [tutorials](https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1)
 
 Comments, questions, suggestions? [Get in touch.](mailto:mail@bennunney.com).
 
-### Licence
+## Licence
 
 This code is relased under the MIT License. Please see the LICENSE file for more information on what this means and how to make attributions.
 
-### Documentation
+## Documentation
 For more details read the docs [here](https://kingston-enterprises-icarus-framework.readthedocs.io/en/latest/)
