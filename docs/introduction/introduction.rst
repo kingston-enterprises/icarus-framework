@@ -7,10 +7,6 @@ The project consists primarily of a custom MVC core and a base application templ
 The template already has all of the basic features constructed and tested, in addition to the core, which is fully built and tested.
 Together, they form a light foundation for any of our customer projects.
 
-Inspiration
-===========
-A big thank you to the `Codeholic <https://github.com/thecodeholic/php-mvc-framework>`_ on GitHub for inspiring and guiding the creation of this project with his youtube `tutorials <https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1>`_ 
-
 Project Scope
 =============
 
