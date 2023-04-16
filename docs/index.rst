@@ -11,11 +11,20 @@ By partnering with us, you can be assured that the solutions we provide are tail
    This project is under active development.
 
 Contents
---------
+=========
+
+Introduction
+------------
 .. toctree::
    :maxdepth: 2
 
    ./introduction/introduction
+
+Core
+------------
+.. toctree::
+   :maxdepth: 2
+
    ./core/application
    ./core/controller
    ./core/database
@@ -25,7 +34,25 @@ Contents
    ./core/router
    ./core/session
    ./core/view
+
+form
+----
+.. toctree::
+   :maxdepth: 2
+
    ./form/form
+
+Exceptions
+----------
+.. toctree::
+   :maxdepth: 2
+
    ./exceptions/exceptions
+
+Helpers
+-------
+.. toctree::
+   :maxdepth: 2
+   
    ./helpers/helpers
       
