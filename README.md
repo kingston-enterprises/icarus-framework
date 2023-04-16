@@ -1,27 +1,7 @@
 # Icarus framework
 
 Icarus was built with the intention of producing a lightweight, user-friendly framework to aid in the building of websites.
-The idea is that when starting a fresh c project, we can simply install the tested code for the essential functionalities and then build on that. 
-
-## Inspiration
-A big thank you to the [codeholic](https://github.com/thecodeholic/php-mvc-framework) on GitHub for inspiring and guiding the creation of this project with his youtube [tutorials](https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1)
-
-
-##
-
-- Base application
-   - Secured migration based database
-   - Secured user login and registration
-   - simple user profile dashboard
-   - simple user profile settings and controls
-   - site visitor counter 
-
-Core
-   - mvc architecture
-   - `.env` database connection
-   - custom routing
-   - form templates
- 
+The idea is that when starting a fresh client project, we can simply install the tested code for the essential functionalities and then build on that. 
 
 ![Kingston Enterprises Icarus FrameWork Graphic](https://user-images.githubusercontent.com/67066977/215330853-7be454cf-66ed-4db3-b106-547f7c83bb2d.jpg)
 
@@ -62,15 +42,19 @@ php -S localhost:5050
 ![Kingston Enterprises Icarus FrameWork Welcome Screen](https://user-images.githubusercontent.com/67066977/218307804-52990155-c354-4704-95f4-d87d526a7f7d.png)
 
 ### Contributing
-Any form of contributions are fully accepted, just open a github issue [here](https://github.com/kingston-enterprises/icarus-framework/issues)
+
+Any form of contributions are fully accepted, just Future versions of this framework are planned, with massive extensions to the logic side of things. we welcome any and all contributions, so please feel free to contribute. If you have ideas for the direction that the framework should take, please don't hesitate to open a github issue [here](https://github.com/kingston-enterprises/icarus-framework/issues) or just directy get in touch with the creatr [here](mailto:qhawem54@gmail.com).
+
+
+### Acknowledgements
+
+A big thank you to the [codeholic](https://github.com/thecodeholic/php-mvc-framework) on GitHub for inspiring and guiding the creation of this project with his youtube [tutorials](https://www.youtube.com/playlist?list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1)
+
+Comments, questions, suggestions? [Get in touch.](mailto:mail@bennunney.com).
 
 ### Licence
-MIT
 
-### Contact
-contact us at:
-   - info@kingston-enterprises.net
-   - qhawe@kingston-enterprises.net
+This code is relased under the MIT License. Please see the LICENSE file for more information on what this means and how to make attributions.
 
 ### Documentation
 For more details read the docs [here](https://kingston-enterprises-icarus-framework.readthedocs.io/en/latest/)

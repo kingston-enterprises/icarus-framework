@@ -1,6 +1,3 @@
-
-
-
 Welcome to Kingston Enterprises Icarus framework documentation!
 ===================================
 
