@@ -12,20 +12,23 @@ By partnering with us, you can be assured that the solutions we provide are tail
 
 Contents
 --------
+    :maxdepth: 2
 
+    narr/introduction
 .. toctree::
+   :maxdepth: 2
 
-   introduction
-   application
-   controller
-   database
-   dbmodel
-   model
-   request
-   router
-   session
-   view
-   form
-   exceptions
-   helpers
+   ./introduction/introduction
+   ./core/application
+   ./core/controller
+   ./core/database
+   ./core/dbmodel
+   ./core/model
+   ./core/request
+   ./core/router
+   ./core/session
+   ./core/view
+   ./form/form
+   ./exceptions/exceptions
+   ./helpers/helpers
       
