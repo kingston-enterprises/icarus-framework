@@ -11,7 +11,6 @@ By partnering with us, you can be assured that the solutions we provide are tail
    This project is under active development.
 
 Contents
-=========
 
 Introduction
 ------------
@@ -53,6 +52,6 @@ Helpers
 -------
 .. toctree::
    :maxdepth: 2
-   
+
    ./helpers/helpers
       
