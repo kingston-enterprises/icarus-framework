@@ -157,7 +157,7 @@ class Application
         $this->session = new Session();
 
         /** @deprecated v23.03.22 */
-        $this->userClass = $config['userClass'];
+        //$this->userClass = $config['userClass'];
     }
 
     /**
