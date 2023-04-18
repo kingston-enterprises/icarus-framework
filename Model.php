@@ -143,7 +143,7 @@ class Model
      */
     public function setRules($rules) : void
     {
-        foreach ($rules as $key) {
+        foreach ($rules as $key => $rule) {
             if (!property_exists($this, $key)) {
                 unset($rules[$key]);
             }
@@ -277,9 +277,9 @@ class Model
      * check if attribute has error
      *
      * @param string $attribute
-     * @return boolean
+     * @return array|bool
      */
-    public function hasError($attribute) : bool
+    public function hasError($attribute) : array|bool
     {
         return $this->errors[$attribute] ?? false;
     }

@@ -83,9 +83,9 @@ class Router {
     /**
      * get route callback funtion
      *
-     * @return string|bool
+     * @return array|bool
      */
-    public function getCallback() : string|bool
+    public function getCallback() : array|bool
     {
         $method = $this->request->getMethod();
         $url = $this->request->getUrl();
