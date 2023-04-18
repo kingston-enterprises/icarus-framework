@@ -1,0 +1,82 @@
+## v19.04.23
+- added changelog
+- fixed return type related bugs
+- Update Application.php
+- updated Licence
+- update introduction
+- updated intro
+- updated introduction
+- updated README
+- updated README
+- updated table of contents
+- updated README
+- formatted helpers docs
+- added helpers to docs
+- added exceptions to docs
+- added Session and View to docs
+- added Router docs
+- added Request docs
+- added Model docs
+- added DbModel to docs
+- edited controller docs
+- edited Database docs
+- added Database docs
+- edited Controller docs
+- added Controller docs
+- updated Application docs
+- Update index.rst
+- Create introduction.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update index.rst
+- Update application.rst
+- Update application.rst
+- Update application.rst
+- added methods to application docs
+- edited properties table
+- adde table
+- added contents to docs
+- added properties to application docs
+- cod
+- improved image vie in docs
+- imroved internal links in docs
+- added credits to docs
+- added images to Docs
+- added Application documentation
+- edited docs
+- edited docs
+- improved Documentation
+- improved documentation
+- improved documentation
+- Updated to getAttributes()
+- latest commit
+- added dynamic placeholder for form inputs
+- create db model class
+- debugged model class and added unit tests
+- included collection class tests
+- created collection class
+- installed php unit
+- Update README.md
+- Update README.md
+- Update README.md
+- updated README
+- removed user login and logout functions
+- added datetime field
+- mended database migrations directory
+- repaired namespaces
+- Update README.md
+- Update README.md
+- Update README.md
+- Update README.md
+- added MIT licence
+- added kingston\icarus namespace
+- composer init
+- first commit
