@@ -206,7 +206,7 @@ class Model
                     }
                 }
                 if (in_array($attribute, $ignore)) {
-                    echo PHP_EOL . $attribute . "should be ignored";
+                    // echo PHP_EOL . $attribute . "should be ignored";
                     array_pop($this->errors);
                 }
             }

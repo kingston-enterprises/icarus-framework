@@ -110,6 +110,24 @@ abstract class DbModel extends Model
     }
 
     /**
+     * delete record in the database
+     *
+     * @param integer $id id of record to be updated
+     * @return bool
+     */
+    public function delete(int $id): bool
+    {
+        $tableName = $this->tableName();
+        $attributes = $this->getAttributes();
+        $params = array_map(fn ($attr) => ":$attr", $attributes);
+        $paramlist = $this->merge($attributes, $params);
+
+        $statement = self::prepare("DELETE from " . $tableName . " WHERE id = " . $id . "");
+        $statement->execute();
+        return true;
+    }
+
+    /**
      * prepare sql query
      *
      * @param sql $sql sql query

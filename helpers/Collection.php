@@ -1,7 +1,8 @@
 <?php
+
 /** 
  * @author kingston-5 <qhawe@kingston-enterprises.net>
- * @package icarus\exception
+ * @package icarus\helpers
  * @license For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -16,7 +17,8 @@ use ArrayIterator;
  * class Collection is an easy wrapper for working with arrays of data
  * @implements \IteratorAggregate
  */
-class Collection implements IteratorAggregate {
+class Collection implements IteratorAggregate
+{
     /**
      * items in collection
      *
@@ -32,15 +34,29 @@ class Collection implements IteratorAggregate {
     /**
      * @return array
      */
-    public function get() : array
+    public function get(): array
     {
         return $this->items;
     }
 
     /**
+     * get Specific items property
+     * @return array
+     */
+    public function getProp($prop): array
+    {
+
+        $result = array();
+        foreach ($this->items as $item) {
+            array_push($result, $item->$prop);
+        }
+        return $result;
+    }
+
+    /**
      * @return int
      */
-    public function count() : int
+    public function count(): int
     {
         return count($this->items);
     }
@@ -48,12 +64,12 @@ class Collection implements IteratorAggregate {
     /**
      * @return int
      */
-    public function countIf($prop, $value) : int
+    public function countIf($prop, $value): int
     {
 
         $result = array();
-        foreach($this->items as $item){
-            if($item->$prop === $value){
+        foreach ($this->items as $item) {
+            if ($item->$prop === $value) {
                 array_push($result, $item);
             }
         }
@@ -72,7 +88,7 @@ class Collection implements IteratorAggregate {
     /**
      * @return string|false
      */
-    public function toJson() : string|false
+    public function toJson(): string|false
     {
         return json_encode($this->items);
     }

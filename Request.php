@@ -1,4 +1,5 @@
 <?php
+
 /** 
  * @author kingston-5 <qhawe@kingston-enterprises.net>
  * @package icarus
@@ -11,7 +12,8 @@ namespace kingston\icarus;
 /**
  * Controlling class for all system http requests.
  */
-class Request {
+class Request
+{
     /**
      * http route parameters
      *
@@ -24,7 +26,7 @@ class Request {
      *
      * @return string
      */
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
@@ -34,7 +36,7 @@ class Request {
      *
      * @return string
      */
-    public function getUrl() : string
+    public function getUrl(): string
     {
         $path = $_SERVER['REQUEST_URI'];
         $position = strpos($path, '?');
@@ -49,7 +51,7 @@ class Request {
      *
      * @return boolean
      */
-    public function isGet() : bool
+    public function isGet(): bool
     {
         return $this->getMethod() === 'get';
     }
@@ -59,7 +61,7 @@ class Request {
      *
      * @return boolean
      */
-    public function isPost() : bool
+    public function isPost(): bool
     {
         return $this->getMethod() === 'post';
     }
@@ -69,7 +71,7 @@ class Request {
      *
      * @return array
      */
-    public function getBody() : array
+    public function getBody(): array
     {
         $data = [];
         if ($this->isGet()) {
@@ -82,8 +84,23 @@ class Request {
                 $data[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }
-        
+
         return $data;
+    }
+
+    /**
+     * get http request $_FILES data
+     *
+     * @return array
+     */
+    public function getFiles($fileName): array
+    {
+        foreach ($_FILES as $key => $value) {
+            if ($fileName == $key) {
+                return $_FILES[$fileName];
+            }
+        }
+        return false;
     }
 
     /**
@@ -92,7 +109,7 @@ class Request {
      * @param $params
      * @return self
      */
-    public function setRouteParams($params) : self
+    public function setRouteParams($params): self
     {
         $this->routeParams = $params;
         return $this;
@@ -103,7 +120,7 @@ class Request {
      * 
      * @return array
      */
-    public function getRouteParams() : array
+    public function getRouteParams(): array
     {
         return $this->routeParams;
     }
@@ -115,7 +132,7 @@ class Request {
      * @param null      $default default route paramter null
      * @return string
      */
-    public function getRouteParam($param, $default = null) : string
+    public function getRouteParam($param, $default = null): string
     {
         return $this->routeParams[$param] ?? $default;
     }
