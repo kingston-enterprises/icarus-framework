@@ -153,7 +153,7 @@ class Application
         $this->response = new Response();
         $this->router = new Router($this->request, $this->response);
         $this->view = new View();
-        $this->db = new Database($config['db']);
+        $this->db = new Database($config['db'], $config['migrations']);
         $this->session = new Session();
 
         /** @deprecated v23.03.22 */

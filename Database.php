@@ -21,15 +21,24 @@ class Database
     public \PDO $pdo;
 
     /**
+     * migration Directory
+     *
+     * @var string
+     */
+    public string $migrationDir;
+
+    /**
      * start PDO instance
      *
      * @param array $dbConfig
      */
-    public function __construct($dbConfig = [])
+    public function __construct($dbConfig = [], string $migrationDir)
     {
         $dbDsn = $dbConfig['dsn'] ?? '';
         $username = $dbConfig['user'] ?? '';
         $password = $dbConfig['password'] ?? '';
+
+        $this->migrationDir = $migrationDir;
 
         $this->pdo = new \PDO($dbDsn, $username, $password);
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
@@ -46,14 +55,14 @@ class Database
         $appliedMigrations = $this->getAppliedMigrations();
 
         $newMigrations = [];
-        $files = scandir(Application::$ROOT_DIR . '/../migrations');
+        $files = scandir(Application::$ROOT_DIR . $this->migrationDir);
         $toApplyMigrations = array_diff($files, $appliedMigrations);
         foreach ($toApplyMigrations as $migration) {
             if ($migration === '.' || $migration === '..') {
                 continue;
             }
 
-            require_once Application::$ROOT_DIR . '/../migrations/' . $migration;
+            require_once Application::$ROOT_DIR . $this->migrationDir . $migration;
             $className = pathinfo($migration, PATHINFO_FILENAME);
             $instance = new $className();
             $this->log("Applying migration $migration");
