@@ -85,7 +85,7 @@ class Model
      * @param array    $data data array
      * @return void
      */
-    public function loadData($data) : void
+    public function loadData($data): void
     {
         foreach ($data as $key => $value) {
             if (property_exists($this, $key) && !empty($value)) {
@@ -100,7 +100,7 @@ class Model
      * @param array     $attributes attibutes array
      * @return void
      */
-    public function setAttributes($attributes) : void
+    public function setAttributes($attributes): void
     {
         $this->attributes = $attributes;
     }
@@ -110,7 +110,7 @@ class Model
      *
      * @return array
      */
-    public function getAttributes() : array
+    public function getAttributes(): array
     {
         return $this->attributes;
     }
@@ -121,7 +121,7 @@ class Model
      * @param array $labels
      * @return void
      */
-    public function setLabels($labels) : void
+    public function setLabels($labels): void
     {
         $this->labels = $labels;
     }
@@ -132,7 +132,7 @@ class Model
      * @param string $attribute attribute name
      * @return string
      */
-    public function getLabel($attribute) : string
+    public function getLabel($attribute): string
     {
         return $this->labels[$attribute] ?? $attribute;
     }
@@ -141,7 +141,7 @@ class Model
      * set form validation rules
      * @return void
      */
-    public function setRules($rules) : void
+    public function setRules($rules): void
     {
         foreach ($rules as $key => $rule) {
             if (!property_exists($this, $key)) {
@@ -156,9 +156,20 @@ class Model
      *
      * @return array
      */
-    public function getRules() : array
+    public function getRules(): array
     {
         return $this->rules;
+    }
+
+    /**
+     * get Model property
+     *
+     * @param string $prop
+     * @return string|integer
+     */
+    public function getProp($prop): string|int
+    {
+        return $this->$prop;
     }
 
     /**
@@ -167,7 +178,7 @@ class Model
      * @param array     $ignore array of values to ignore
      * @return bool
      */
-    public function validate(array $ignore = []) : bool
+    public function validate(array $ignore = []): bool
     {
         foreach ($this->getRules() as $attribute => $rules) {
             $value = $this->{$attribute};
@@ -220,7 +231,7 @@ class Model
      *
      * @return array
      */
-    public function errorMessages() : array
+    public function errorMessages(): array
     {
         return [
             self::RULE_REQUIRED => '{field} is required',
@@ -238,7 +249,7 @@ class Model
      * @param string $rule
      * @return string
      */
-    public function errorMessage($rule) : string
+    public function errorMessage($rule): string
     {
         return $this->errorMessages()[$rule];
     }
@@ -251,7 +262,7 @@ class Model
      * @param array $params validation parameters to include in error message
      * @return void
      */
-    protected function addErrorByRule(string $attribute, string $rule, $params = []) : void
+    protected function addErrorByRule(string $attribute, string $rule, $params = []): void
     {
         $params['field'] ??= $attribute;
         $errorMessage = $this->errorMessage($rule);
@@ -268,7 +279,7 @@ class Model
      * @param string $message error message
      * @return void
      */
-    public function addError(string $attribute, string $message) : void
+    public function addError(string $attribute, string $message): void
     {
         $this->errors[$attribute][] = $message;
     }
@@ -279,7 +290,7 @@ class Model
      * @param string $attribute
      * @return array|bool
      */
-    public function hasError($attribute) : array|bool
+    public function hasError($attribute): array|bool
     {
         return $this->errors[$attribute] ?? false;
     }
@@ -290,9 +301,15 @@ class Model
      * @param  string $attribute
      * @return string
      */
-    public function getFirstError($attribute) : string
+    public function getFirstError($attribute): string
     {
         $errors = $this->errors[$attribute] ?? [];
         return $errors[0] ?? '';
+    }
+
+
+    public function getAllErrors()
+    {
+        return $this->errors;
     }
 }
