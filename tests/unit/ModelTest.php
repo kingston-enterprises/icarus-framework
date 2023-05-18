@@ -63,6 +63,17 @@ class ModelTest extends \PHPUnit\Framework\TestCase
         $this->assertNotEquals('First Name', $this->model->getLabel('last_name'));
     }
 
+    /**@test */
+    public function test_getProp_return_model_property()
+    {
+        $this->model->id = 5;
+        $this->model->first_name = 'First Name';
+        $this->model->last_name = 'Last Name';
+
+        $this->assertEquals(5, $this->model->getProp('id'));
+        $this->assertEquals('First Name', $this->model->getProp('first_name'));
+    }
+
     /** @test */
     public function test_setRules_sets_rules_for_only_existing_attributes()
     {

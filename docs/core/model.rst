@@ -61,7 +61,7 @@ load data into model attributes
 
     public function getAttributes() : array
 
-set model attributes that can be assigned
+get model attributes that can be assigned
 
 *Parameters*
 
@@ -80,7 +80,7 @@ set model attributes that can be assigned
 
     public function setAttributes($attributes) : void
 
-get model attributes
+set model attributes
 
 *Parameters*
 
@@ -90,6 +90,31 @@ get model attributes
 *return*
 
     array
+
+* * *
+
+.. code-block:: console
+
+    public function getProp($prop): string|int
+
+get model attributes
+
+.. note::
+
+   note do not use this method to get Model attributes or Labels. see:
+        - getAttributes()
+        - getLabel()
+
+*Parameters*
+  
+  +--------------------+--------------------+
+  | string             | $prop              | 
+  +--------------------+--------------------+
+
+
+*return*
+
+    string|int
 
 * * *
 
