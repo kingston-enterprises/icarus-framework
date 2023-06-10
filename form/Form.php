@@ -29,7 +29,7 @@ class Form
         foreach ($options as $key => $value) {
             $attributes[] = "$key=\"$value\"";
         }
-        echo sprintf('<form action="%s" method="%s" %s class="max-w-lg mx-auto">', $action, $method, implode(" ", $attributes));
+        echo sprintf('<form enctype="multipart/form-data" action="%s" method="%s" %s class="max-w-lg mx-auto">', $action, $method, implode(" ", $attributes));
         return new Form();
     }
 
